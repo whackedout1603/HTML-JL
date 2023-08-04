@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jordan's Portfolio</title>
+<link rel = "stylesheet" href="style.css">    
+</head>
+<body>
+<div id = "header">
+    <div class = "container">
+        <nav>
+            <img src = "images/logo.png">
+            <ul>
+                <li> <a href = "#">Home</a></li>
+                 <li> <a href = "#">About</a></li>
+                <li> <a href = "#">Services</a></li>
+                 <li> <a href = "#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+        <p></p>
+        <h1>Hey, I'm Jordan Love from Richmond California - I'm learning Japanese for a trip I have to Japan next year!</h1>
+        </div>
+    </div>
+    </div>
+    <!-------------- ABOUT ----------------->
+    <div>id=about>
+        <div class=container>
+             <div class="row">
+                 <div class="about-col-1">
+                 </div>
+                 <!--------- The <div> tag defines a division or section in an HTML document.-->
+                 <div class="about-col-2">
+                     <h1 class ="sub-title">About Me</h1>
+                     <p>I grew up in Richmond California, I enjoy talking and meeting new people and I'll alwasy help anyone when I can.</p>
+                     <div class="tab-titles">
+                         <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                         <p class="tab-links" onclick="opentab('ventures')">Ventures</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                      <li><span>UI/UX</span></li>
+                      <li><span>Wev Development</span></li>
+                </ul>
+                     </div>
+                 </div>
+        </div>
+    </div>
+<!--        Javascript-->
+        <script>
+        function opentab(tabId)  {
+            
+            const tabContents = document.querySelectorAll('.tab-contents');
+            for (const tab of tabContents) {
+                tab.classList.remove('active-tab');
+            }
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active-tab');
+            }
+        }
+        
+        </script>
+<!--    Services -->
+        <div class = "Services">
+            
+        </div>
+    </div>
+</body>
+</html>
